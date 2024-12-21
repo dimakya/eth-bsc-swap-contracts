@@ -61,3 +61,10 @@ Run coverage:
 ```javascript
 npm run coverage
 ```
+
+1. Users register swap pair for erc20 token on ETH via ETHSwapAgent(`createSwapPair`) if token is not registered.
+2. Swap service will monitor the `SwapPairRegister` event and create swap pair on BSC: 
+    
+    1. create an BEP20 token on BSC
+    2. record the relation between erc20 token and bep20 token.
+
